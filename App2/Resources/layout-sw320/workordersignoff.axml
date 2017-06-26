@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    xmlns:custom2="http://schemas.android.com/apk/res/Pirana.Droid"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#06817B"
+        android:textSize="59dp"
+        android:text="sign off"
+        android:gravity="center"
+        android:typeface="sans" />
+    <ScrollView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/scrollView1">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/scrollView345345345">
+                <TextView
+                    android:text="Started"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+                <Pirana.Droid.Views.DateEdit
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    local:MvxBind="When ActualStartDate; Enabled CanEditDate" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:text="Finished"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+                <Pirana.Droid.Views.DateEdit
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    local:MvxBind="When ActualCompletionDate; Enabled CanEditDate" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:text="Time Spent"
+                    android:layout_weight="0.30"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+                <Pirana.Droid.Views.DurationControl
+                    android:layout_width="0dp"
+                    android:inputType="number"
+                    android:layout_weight="0.70"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtDuration"
+                    local:MvxBind="Mins Duration"
+                    android:numeric="integer" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:text="Down Time"
+                    android:layout_weight="0.30"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+                <Pirana.Droid.Views.DurationControl
+                    android:layout_width="0dp"
+                    android:inputType="number"
+                    android:layout_weight="0.70"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtDuration"
+                    local:MvxBind="Mins DownTime"
+                    android:numeric="integer" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:text="Cost Centre"
+                    android:layout_weight="0.30"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+                <Pirana.Droid.TreeControl
+                    android:layout_width="0dp"
+                    android:layout_weight="0.70"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    local:MvxBind="Value Cost_CentreID; DisplayValue CostCentreDescription"
+                    android:id="@+id/treeSignOffCostCentre"
+                    custom2:TreeType="CostCentre" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:text="Cost Code"
+                    android:layout_weight="0.30"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+                <Pirana.Droid.TreeControl
+                    android:layout_width="0dp"
+                    android:layout_weight="0.70"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/treeSignOffCostCode"
+                    local:MvxBind="Value CostCodeID; DisplayValue CostCodeDescription"
+                    custom2:TreeType="CostCode" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                local:MvxBind="Visibility IsPPM,Converter=InvertedVisibility">
+                <TextView
+                    android:layout_width="0dp"
+                    android:text="Action Taken"
+                    android:layout_weight="0.30"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+                <Mvx.MvxSpinner
+                    android:layout_weight="0.70"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/spinFaultArea"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    local:MvxBind="ItemsSource Actions; SelectedItem SelectedAction" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                local:MvxBind="Visibility IsPPM,Converter=InvertedVisibility"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:text="Fault Group"
+                    android:layout_weight="0.30"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+                <Mvx.MvxSpinner
+                    android:layout_weight="0.70"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/spinFaultGroup"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    local:MvxBind="ItemsSource FaultGroups; SelectedItem FaultGroup;" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                local:MvxBind="Visibility IsPPM,Converter=InvertedVisibility"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:text="Fault Area"
+                    android:layout_weight="0.30"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+                <Mvx.MvxSpinner
+                    android:layout_weight="0.70"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/spinFaultArea"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    local:MvxBind="ItemsSource FaultAreas; SelectedItem FaultArea" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                local:MvxBind="Visibility IsPPM,Converter=InvertedVisibility"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:text="Fault Cause"
+                    android:layout_weight="0.30"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+                <Mvx.MvxSpinner
+                    android:layout_weight="0.70"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/spinFaultArea"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    local:MvxBind="ItemsSource FaultCauses; SelectedItem FaultCause" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:text="Fixed On First Visit"
+                    android:layout_weight="0.30"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+                <CheckBox
+                    android:layout_weight="0.70"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    local:MvxBind="Checked FixedFirstTime"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="Notes"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:text="ST"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    local:MvxBind="Click SelectedStandardText" />
+            </LinearLayout>
+            <EditText
+                android:inputType="textMultiLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtSignOffNotes"
+                local:MvxBind="Text Notes" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnSignOffWorkOrder"
+            android:layout_alignParentTop="true"
+            android:text="Sign Off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            local:MvxBind="Click SignOffCommand"
+            android:includeFontPadding="false" />
+        <Button
+            android:id="@+id/btnCancelSignOff"
+            android:text="Cancel"
+            local:MvxBind="Click CancelCommand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:includeFontPadding="false" />
+    </LinearLayout>
+</LinearLayout>

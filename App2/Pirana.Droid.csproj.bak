@@ -1,0 +1,513 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Xamarin.Build.Download.0.4.0\build\Xamarin.Build.Download.props" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.0\build\Xamarin.Build.Download.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A3F35D4C-9FF3-4FB9-A1B5-286A5A05E7C6}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pirana.Droid</RootNamespace>
+    <AssemblyName>d</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <BundleAssemblies>False</BundleAssemblies>
+    <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+    <Debugger>Xamarin</Debugger>
+    <AndroidEnableMultiDex>False</AndroidEnableMultiDex>
+    <DevInstrumentationEnabled>True</DevInstrumentationEnabled>
+    <AotAssemblies>False</AotAssemblies>
+    <EnableLLVM>False</EnableLLVM>
+    <EnableProguard>False</EnableProguard>
+    <AndroidSupportedAbis>armeabi;armeabi-v7a;x86;x86_64;arm64-v8a</AndroidSupportedAbis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <BundleAssemblies>False</BundleAssemblies>
+    <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
+    <Debugger>Xamarin</Debugger>
+    <AotAssemblies>False</AotAssemblies>
+    <EnableLLVM>False</EnableLLVM>
+    <AndroidEnableMultiDex>False</AndroidEnableMultiDex>
+    <EnableProguard>False</EnableProguard>
+    <DebugSymbols>False</DebugSymbols>
+    <AndroidSupportedAbis>armeabi;armeabi-v7a;x86;x86_64;arm64-v8a</AndroidSupportedAbis>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
+    <Reference Include="mscorlib" />
+    <Reference Include="MvvmCross.Binding, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Binding.4.4.0\lib\MonoAndroid\MvvmCross.Binding.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Binding.Droid, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Binding.4.4.0\lib\MonoAndroid\MvvmCross.Binding.Droid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Core, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Core.4.4.0\lib\MonoAndroid\MvvmCross.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Droid, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Core.4.4.0\lib\MonoAndroid\MvvmCross.Droid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Droid.Shared, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Droid.Shared.4.4.0\lib\MonoAndroid\MvvmCross.Droid.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Droid.Support.Fragment, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Droid.Support.Fragment.4.4.0\lib\MonoAndroid70\MvvmCross.Droid.Support.Fragment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Droid.Support.V7.RecyclerView, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Droid.Support.V7.RecyclerView.4.4.0\lib\MonoAndroid70\MvvmCross.Droid.Support.V7.RecyclerView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Localization, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Binding.4.4.0\lib\MonoAndroid\MvvmCross.Localization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Platform, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Platform.4.4.0\lib\MonoAndroid\MvvmCross.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Platform.Droid, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Platform.4.4.0\lib\MonoAndroid\MvvmCross.Platform.Droid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Color, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Plugin.Color.4.4.0\lib\MonoAndroid\MvvmCross.Plugins.Color.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Color.Droid, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Plugin.Color.4.4.0\lib\MonoAndroid\MvvmCross.Plugins.Color.Droid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.File, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Plugin.File.4.4.0\lib\MonoAndroid\MvvmCross.Plugins.File.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.File.Droid, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Plugin.File.4.4.0\lib\MonoAndroid\MvvmCross.Plugins.File.Droid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Messenger, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Plugin.Messenger.4.4.0\lib\MonoAndroid\MvvmCross.Plugins.Messenger.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Network, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Plugin.Network.4.4.0\lib\MonoAndroid\MvvmCross.Plugins.Network.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Network.Droid, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Plugin.Network.4.4.0\lib\MonoAndroid\MvvmCross.Plugins.Network.Droid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.PictureChooser, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Plugin.PictureChooser.4.4.0\lib\MonoAndroid\MvvmCross.Plugins.PictureChooser.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.PictureChooser.Droid, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Plugin.PictureChooser.4.4.0\lib\MonoAndroid\MvvmCross.Plugins.PictureChooser.Droid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Sqlite, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Plugin.SQLitePCL.4.4.0\lib\MonoAndroid\MvvmCross.Plugins.Sqlite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Sqlite.Droid, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Plugin.SQLitePCL.4.4.0\lib\MonoAndroid\MvvmCross.Plugins.Sqlite.Droid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Visibility, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Plugin.Visibility.4.4.0\lib\MonoAndroid\MvvmCross.Plugins.Visibility.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Visibility.Droid, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Plugin.Visibility.4.4.0\lib\MonoAndroid\MvvmCross.Plugins.Visibility.Droid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLite-net, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\sqlite-net-pcl.1.3.1\lib\netstandard1.1\SQLite-net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLitePCL.batteries, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCL.bundle_green.0.9.3\lib\MonoAndroid\SQLitePCL.batteries.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLitePCL.raw, Version=0.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCL.raw.0.9.3\lib\MonoAndroid\SQLitePCL.raw.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLitePCLPlugin_esqlite3, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCL.plugin.sqlite3.android.0.9.3\lib\MonoAndroid\SQLitePCLPlugin_esqlite3.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_green, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a84b7dcfb1391f7f, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.2\lib\MonoAndroid\SQLitePCLRaw.batteries_green.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_v2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8226ea5df37bcae9, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.2\lib\MonoAndroid\SQLitePCLRaw.batteries_v2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1488e028ca7ab535, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.core.1.1.2\lib\MonoAndroid\SQLitePCLRaw.core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.lib.e_sqlite3, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e4ad490600e2234c, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.lib.e_sqlite3.android.1.1.2\lib\MonoAndroid\SQLitePCLRaw.lib.e_sqlite3.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.provider.e_sqlite3, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9c301db686d0bd12, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.provider.e_sqlite3.android.1.1.2\lib\MonoAndroid\SQLitePCLRaw.provider.e_sqlite3.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Xamarin.Android.Support.Compat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Android.Support.Compat.24.2.1\lib\MonoAndroid70\Xamarin.Android.Support.Compat.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Core.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Android.Support.Core.UI.24.2.1\lib\MonoAndroid70\Xamarin.Android.Support.Core.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Core.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Android.Support.Core.Utils.24.2.1\lib\MonoAndroid70\Xamarin.Android.Support.Core.Utils.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Fragment, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Android.Support.Fragment.24.2.1\lib\MonoAndroid70\Xamarin.Android.Support.Fragment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Media.Compat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Android.Support.Media.Compat.24.2.1\lib\MonoAndroid70\Xamarin.Android.Support.Media.Compat.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v13, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Android.Support.v13.24.2.1\lib\MonoAndroid70\Xamarin.Android.Support.v13.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.24.2.1\lib\MonoAndroid70\Xamarin.Android.Support.v4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Collections" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Globalization" />
+    <Reference Include="System.ObjectModel" />
+    <Reference Include="System.Linq.Expressions" />
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.RecyclerView.24.2.1\lib\MonoAndroid70\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ZXing.Net.Mobile.Core, Version=2.1.47.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.Mobile.2.1.47\lib\MonoAndroid403\ZXing.Net.Mobile.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="zxing.portable, Version=2.1.47.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.Mobile.2.1.47\lib\MonoAndroid403\zxing.portable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ZXingNetMobile, Version=2.1.47.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.Mobile.2.1.47\lib\MonoAndroid403\ZXingNetMobile.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\TestFragment.cs" />
+    <Compile Include="Bootstrap\ColorPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
+    <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\NetworkPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\PictureChooserPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\SignaturePadPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\SqlitePluginBootstrap.cs" />
+    <Compile Include="Bootstrap\VisibilityPluginBootstrap.cs" />
+    <Compile Include="CustomControls\MyActionBarDrawerToggle.cs" />
+    <Compile Include="CustomControls\CustomerPresenter.cs" />
+    <Compile Include="LinkerPleaseInclude.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setup.cs" />
+    <Compile Include="SplashScreen.cs" />
+    <Compile Include="Views\HomeView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\layout\FirstView.axml" />
+    <AndroidResource Include="Resources\layout\drawerlistitem.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\drawlistsubitem.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\drawerlistemptyitem.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\drawerlistheaderitem.axml" />
+    <AndroidResource Include="Resources\layout\drawerlistheaderitemwithimage.axml" />
+    <AndroidResource Include="Resources\layout\SplashScreen.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\AndroidManifest.xml" />
+    <AndroidResource Include="Resources\drawable\splash.png" />
+    <AndroidResource Include="Resources\drawable\action_other.png" />
+    <AndroidResource Include="Resources\drawable\action_search.png" />
+    <AndroidResource Include="Resources\drawable\drawer_shadow_dark.9.png" />
+    <AndroidResource Include="Resources\drawable\drawer_shadow_light.9.png" />
+    <AndroidResource Include="Resources\drawable\ic_drawer_dark.png" />
+    <AndroidResource Include="Resources\drawable\ic_drawer_light.png" />
+    <AndroidResource Include="Resources\drawable\clear24.gif" />
+    <AndroidResource Include="Resources\values\attrs.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\shirelogosmall.png" />
+    <AndroidResource Include="Resources\drawable\stop.png" />
+    <AndroidResource Include="Resources\drawable\play.png" />
+    <AndroidResource Include="Resources\drawable\pause.png" />
+    <AndroidResource Include="Resources\drawable\add.png" />
+    <AndroidResource Include="Resources\drawable\warning.png" />
+    <AndroidAsset Include="Assets\images\wodue.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\images\wolate.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\images\woodue.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\images\wopending.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidResource Include="Resources\drawable\wo_due.png" />
+    <AndroidResource Include="Resources\drawable\wo_late.png" />
+    <AndroidResource Include="Resources\drawable\wo_odue.png" />
+    <AndroidResource Include="Resources\drawable\wo_pending.png" />
+    <AndroidResource Include="Resources\drawable\shirebutton.xml" />
+    <AndroidResource Include="Resources\drawable\shireborder.xml" />
+    <AndroidResource Include="Resources\drawable\dashboardbanner.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_unselected_pressed_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ab_bottom_solid_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ab_solid_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ab_stacked_solid_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ab_texture_tile_piranamobile.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ab_transparent_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\btn_cab_done_default_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\btn_cab_done_focused_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\btn_cab_done_pressed_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\cab_background_bottom_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\cab_background_top_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\list_focused_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\list_pressed_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\menu_dropdown_panel_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\progress_bg_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\progress_primary_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\progress_secondary_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\spinner_ab_default_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\spinner_ab_disabled_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\spinner_ab_focused_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\spinner_ab_pressed_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_selected_focused_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_selected_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_selected_pressed_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_unselected_focused_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_unselected_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tab_unselected_pressed_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ab_bottom_solid_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ab_solid_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ab_stacked_solid_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ab_texture_tile_piranamobile.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ab_transparent_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\btn_cab_done_default_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\btn_cab_done_focused_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\btn_cab_done_pressed_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\cab_background_bottom_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\cab_background_top_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\list_focused_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\list_pressed_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\menu_dropdown_panel_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\progress_bg_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\progress_primary_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\progress_secondary_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\spinner_ab_default_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\spinner_ab_disabled_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\spinner_ab_focused_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\spinner_ab_pressed_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tab_selected_focused_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tab_selected_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tab_selected_pressed_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tab_unselected_focused_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\tab_unselected_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_unselected_pressed_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ab_bottom_solid_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ab_solid_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ab_stacked_solid_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ab_texture_tile_piranamobile.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ab_transparent_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\btn_cab_done_default_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\btn_cab_done_focused_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\btn_cab_done_pressed_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\cab_background_bottom_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\cab_background_top_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\list_focused_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\list_pressed_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\menu_dropdown_panel_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\progress_bg_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\progress_primary_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\progress_secondary_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\spinner_ab_default_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\spinner_ab_disabled_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\spinner_ab_focused_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\spinner_ab_pressed_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_selected_focused_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_selected_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_selected_pressed_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_unselected_focused_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_unselected_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_unselected_pressed_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ab_bottom_solid_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ab_solid_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ab_stacked_solid_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ab_texture_tile_piranamobile.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ab_transparent_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\btn_cab_done_default_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\btn_cab_done_focused_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\btn_cab_done_pressed_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\cab_background_bottom_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\cab_background_top_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\list_focused_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\list_pressed_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\menu_dropdown_panel_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\progress_bg_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\progress_primary_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\progress_secondary_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\spinner_ab_default_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\spinner_ab_disabled_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\spinner_ab_focused_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\spinner_ab_pressed_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_selected_focused_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_selected_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_selected_pressed_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_unselected_focused_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_unselected_piranamobile.9.png" />
+    <AndroidResource Include="Resources\drawable\tab_indicator_ab_piranamobile.xml" />
+    <AndroidResource Include="Resources\drawable\ab_background_textured_piranamobile.xml" />
+    <AndroidResource Include="Resources\drawable\btn_cab_done_piranamobile.xml" />
+    <AndroidResource Include="Resources\drawable\progress_horizontal_piranamobile.xml" />
+    <AndroidResource Include="Resources\drawable\selectable_background_piranamobile.xml" />
+    <AndroidResource Include="Resources\drawable\spinner_background_ab_piranamobile.xml" />
+    <AndroidResource Include="Resources\drawable\delete.png" />
+    <AndroidResource Include="Resources\drawable\barcode.png" />
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+    <AndroidResource Include="Resources\drawable\shirebutton2.xml" />
+    <AndroidResource Include="Resources\drawable\shirebutton3.xml" />
+    <AndroidResource Include="Resources\drawable\button_focused.xml" />
+    <AndroidResource Include="Resources\drawable\button_disabled.xml" />
+    <AndroidResource Include="Resources\drawable\button_pressed.xml" />
+    <AndroidResource Include="Resources\drawable\button_enabled.xml" />
+    <AndroidResource Include="Resources\drawable\background_with_shadow.xml" />
+    <AndroidResource Include="Resources\drawable\email.png" />
+    <AndroidResource Include="Resources\drawable\phone.png" />
+    <AndroidResource Include="Resources\drawable\skype.png" />
+    <AndroidResource Include="Resources\drawable\blankperson.png" />
+    <AndroidResource Include="Resources\drawable\team.png" />
+    <AndroidResource Include="Resources\drawable\floor.png" />
+    <AndroidResource Include="Resources\drawable\Icon_Re.png" />
+    <Content Include="Resources\shirebutton.xml" />
+    <AndroidResource Include="Resources\values\styles.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\themes.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\styles_piranamobile.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\MvxBindingAttributes.xml" />
+    <AndroidResource Include="Resources\values\SplashStyle.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <Project>{67f9d3a8-f71e-4428-913f-c37ae82cdb24}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\layout-sw320dp\" />
+    <Folder Include="Resources\layout-sw600dp\" />
+    <Folder Include="Services\" />
+    <Folder Include="ToDo-MvvmCross\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Xamarin.Build.Download.0.4.0\build\Xamarin.Build.Download.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Build.Download.0.4.0\build\Xamarin.Build.Download.props'))" />
+    <Error Condition="!Exists('..\packages\Xamarin.Build.Download.0.4.0\build\Xamarin.Build.Download.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Build.Download.0.4.0\build\Xamarin.Build.Download.targets'))" />
+  </Target>
+  <Import Project="..\packages\Xamarin.Build.Download.0.4.0\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.0\build\Xamarin.Build.Download.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+     Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

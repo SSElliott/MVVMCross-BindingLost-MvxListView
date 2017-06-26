@@ -1,0 +1,27 @@
+﻿<resources>
+  <style name="PiranaTheme" parent="android:Theme.Holo.Light">
+
+   
+  </style>
+
+
+
+
+
+
+
+  <style name="MyActionBarTabTextStyle" parent="@android:style/Widget.Holo.Light.Tab">
+    <item name="android:textSize">14sp</item>
+    <item name="android:padding">0dip</item>
+
+  </style>
+
+
+  <style name="Theme.YourTheme.Styled.ActionBar.TitleTextStyle" parent="@android:style/Widget.TextView">
+  <item name="android:textSize">35sp</item>
+  </style>
+
+
+
+
+</resources>

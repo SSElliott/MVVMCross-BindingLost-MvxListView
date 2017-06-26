@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_IServices" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                  <security mode="Transport">
+                            </security>
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+          <endpoint address="https://www.piranacmms.com/PiranaAndroidBetaDev/External/Services.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IServices"
+                contract="IServices" name="BasicHttpBinding_IServices" />
+        </client>
+        <extensions />
+    </system.serviceModel>
+</configuration>
